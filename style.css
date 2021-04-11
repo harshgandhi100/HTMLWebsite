@@ -1,0 +1,166 @@
+*{
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    z-index: 0;
+}
+body{
+    background-color:#e0e0e0;
+    font-family: carlito, sans-serif;
+    overflow-x: hidden;
+}
+nav{
+    background-color:#0082aa;
+    display: flex;
+    justify-content: space-between;
+    min-height: 8vh;
+    width: 100vw;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    top:0;
+    left:0;
+
+}
+nav > .heading{
+    color: #f1f1f1;
+    font-size: 20px;
+    margin: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.nav-bar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+}
+.nav-item{
+    list-style-type: none;
+    margin: 10px
+}
+
+.nav-item a{
+    color: #f1f1f1;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight:bold;
+    font-size:14px;
+    
+}
+.burger div{
+    width:25px;
+    height:3px;
+    background-color: #f1f1f1;
+    margin:5px;
+    transition: all 0.3s ease;
+}
+.burger {
+    margin:10px;
+    cursor: pointer;
+    display:none;
+}
+.anim .line1{
+    transform: rotate(45deg) translate(5px,6px);
+}
+.anim .line2{
+    background-color: #f1f1f100;
+}
+.anim .line3{
+    transform: rotate(-45deg) translate(5px,-6px);
+}
+
+.back-glyph{
+    background-image: url(./book.svg);
+    width: 40vh;
+    height: 40vh;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: -2;
+    position: absolute;
+    bottom: 0;
+    right: 0 ;
+}
+
+.button{
+    background-color:#00000014;
+    color: #f1f1f1;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#home{
+    background-color:#0082aa;
+    color: #f1f1f1;
+}
+
+#about{
+    background-color:#e0e0e0;
+    color: #0f0f0f;
+}
+
+#contact{
+    color:#e0e0e0;
+    background-color: #0f0f0f;
+}
+
+
+
+
+.page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.page > .heading{
+    font-size: 20px;
+    margin: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.page > .glyph{
+    background-image: url(./book.svg);
+    width: 40vh;
+    height: 40vh;
+    background-repeat: no-repeat;
+    margin: 20px;
+    opacity: 0.1;
+}
+
+.page > .text{
+    margin: 20px;
+    width: 40vh;
+}
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+    .nav-bar{
+        position: absolute;
+        left: 0px;
+        height:92vh;
+        top : 8vh;
+        background-color:#0082aa;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in;
+        justify-content: start;
+    }
+    .nav-active{
+        transform: translateX(0%);
+        
+    }
+    nav{
+        justify-content: flex-start;
+    }
+}
